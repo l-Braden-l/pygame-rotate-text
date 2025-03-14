@@ -53,27 +53,35 @@ def main():
       running = handle_events()
       screen.fill(config.WHITE) # Use color from config
 
+      pygame.draw.rect(screen, config.SKY_BLUE, [0,170,900,500],0)
       # -- Define text properties -- #
-      font_name1 = "Ariel"
+      font_name1 = None
       text1 = "Hello, Pygame!"
       font_size1 = 60
-      color1 = config.BROWN
-      x1, y1 = 200, 250
+      color1 = config.BLACK
+      x1, y1 = 400, 150
 
       text2 = "Bold Text!"
       font_size2 = 45
       color2 = config.RED
-      x2, y2 = 200, 320
+      x2, y2 = 180, 100
 
       text3 = "Italic Text!"
       font_size3 = 79
       color3 = config.GREEN
-      x3, y3 = 450, 470
+      x3, y3 = 470, 100
+
+      text4 = "!emagyP ,olleH"
+      font_size4 = 60
+      color4 = config.BLACK
+      x4, y4 = 398, 195
 
       # -- Draw text on screen using variables -- #
       draw_text(screen, text1, font_size1, color1, x1, y1, font_name1)
-      draw_text()
-      draw_text()
+      draw_text(screen, text2, font_size2, color2, x2, y2, bold=True)
+      draw_text(screen, text3, font_size3, color3, x3, y3, italic=True, rotation= 0)
+      draw_text(screen, text4, font_size4, color4, x4, y4, italic=True, rotation= 180)
+      
 
       pygame.display.flip()
 
