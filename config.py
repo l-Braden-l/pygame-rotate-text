@@ -1,4 +1,4 @@
-O# Pygame Configuration Module
+# Pygame Configuration Module
 # Color constants (RGB)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
